@@ -21,7 +21,7 @@ export class UsersService {
   }
 
   getUserById(pId: number): Promise<any> {
-    return lastValueFrom(this.httpClient.get<any>(`${this.baseUrl}${pId}`));
+    return lastValueFrom(this.httpClient.get<any>(`${this.baseUrl}/${pId}`));
   }
 
   createUSer(pUser: User): Promise<User> {
@@ -29,10 +29,10 @@ export class UsersService {
   }
 
   updateUser(pUser: User): Promise<any> {
-    return lastValueFrom(this.httpClient.put<any>(`${this.baseUrl}${pUser.id}`, pUser));
+    return lastValueFrom(this.httpClient.put<any>(`${this.baseUrl}/${pUser.id}`, pUser));
   }
 
   deleteUser(pId: number): Promise<{}> {
-    return lastValueFrom(this.httpClient.delete<any>(`${this.baseUrl}${pId}`));
+    return lastValueFrom(this.httpClient.delete<any>(`${this.baseUrl}/${pId}`));
   }
 }
