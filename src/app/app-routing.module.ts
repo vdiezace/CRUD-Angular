@@ -7,12 +7,12 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
 import { ViewUserComponent } from './components/view-user/view-user.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent},
-  { path: 'home/new', component: NewUserComponent},
-  { path: 'home/update/:userId', component: UpdateUserComponent},
-  { path: 'home/view/:userId', component: ViewUserComponent},
-  { path: '**', component: PageNotFoundComponent}
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: 'home', component: HomeComponent },
+  { path: 'new', component: NewUserComponent },
+  { path: 'update/:userId', component: UpdateUserComponent },
+  { path: 'view/:userId', component: ViewUserComponent },
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({

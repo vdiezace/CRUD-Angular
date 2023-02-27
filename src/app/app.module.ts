@@ -12,8 +12,8 @@ import { ViewUserComponent } from './components/view-user/view-user.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
 import { NewUserComponent } from './components/new-user/new-user.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -24,8 +24,8 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     UpdateUserComponent,
     NewUserComponent,
     FooterComponent,
-    SpinnerComponent,
     PageNotFoundComponent,
+    UserComponent,
   ],
   imports: [
     BrowserModule,

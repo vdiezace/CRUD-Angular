@@ -1,0 +1,14 @@
+.card-text {
+    font-size: 15px;
+}
+
+.text-a {
+    font-size: 12px;
+}
+
+a:link,
+a:visited,
+a:active {
+    text-decoration: none;
+    color: black;
+}
