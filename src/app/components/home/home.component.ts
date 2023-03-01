@@ -9,8 +9,9 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class HomeComponent implements OnInit {
 
-  arrayUser: User[] = [];
+  loading: boolean = false;
 
+  arrayUsers: User[] = [];
 
   arrayPages: Number[] = [];
   current_page: number = 0;
@@ -18,9 +19,9 @@ export class HomeComponent implements OnInit {
 
   constructor(private usersService: UsersService) { }
 
-  async ngOnInit() {
+  async ngOnInit(): Promise<void> {
+    this.loading = true;
     this.changePage();
-
     let response = await this.usersService.getAllUser()
     for (let index = 0; index < response.total_pages; index++) {
       this.arrayPages.push(index + 1);
@@ -29,13 +30,14 @@ export class HomeComponent implements OnInit {
 
   async changePage(pPage: number = 1) {
     try {
-      let response = await this.usersService.getAllUser(pPage)
+      let response = await this.usersService.getAllUser(pPage);
       this.current_page = response.page;
       //console.log(response.results)
-      this.arrayUser = response.results;
+      this.arrayUsers = response.results;
+      this.loading = false;
       this.total_pages = response.total_pages;
-    } catch (err) {
-      console.log(err)
+    } catch (error) {
+      console.log(error)
     }
   }
 }
