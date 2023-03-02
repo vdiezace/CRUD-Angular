@@ -3,7 +3,7 @@
         <div class="col">
             <div class="row-sm-3 d-flex justify-content-center">
                 <img class="img-fluid rounded-circle mx-auto d-block w-50" [src]="myUser?.image"
-                    [alt]="'Image picture of:' + myUser?.first_name">
+                    [alt]="'Image picture of:' + myUser?.first_name + myUser?.last_name">
             </div>
             <div class="card-text d-flex mt-2 mb-2 align-items-center justify-content-center">
                 {{myUser?.first_name}} {{myUser?.last_name}}
