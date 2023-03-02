@@ -58,7 +58,7 @@ export class FormComponent implements OnInit {
       try {
         let response = await this.usersService.updateUser(user);
         //console.log(response);
-        if (response.id) {
+        if (response._id) {
           Swal.fire({
             icon: 'success',
             title: `El usuario ${response.first_name} ${response.last_name} se ha actualizado correctamente`
