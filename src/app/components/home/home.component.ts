@@ -14,8 +14,8 @@ export class HomeComponent implements OnInit {
   arrayUsers: User[] = [];
 
   arrayPages: Number[] = [];
-  current_page: number = 0;
-  total_pages: number = 0
+  current_page: number = 1;
+  total_pages: number = 1;
 
   constructor(private usersService: UsersService) { }
 
@@ -31,10 +31,10 @@ export class HomeComponent implements OnInit {
   async changePage(pPage: number = 1) {
     try {
       let response = await this.usersService.getAllUser(pPage);
-      this.current_page = response.page;
       //console.log(response.results)
       this.arrayUsers = response.results;
       this.loading = false;
+      this.current_page = response.page;
       this.total_pages = response.total_pages;
     } catch (error) {
       console.log(error)
