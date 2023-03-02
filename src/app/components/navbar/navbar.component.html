@@ -2,23 +2,32 @@
     <div class="container-fluid">
         <a class="btn" [routerLink]="['/home']">
             <i class="fa fa-user fa-2x"></i></a>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <button class="btn" [routerLink]="['/home']">
-                        <a class="nav-link active">
-                            <i class="fa fa-home"></i>
-                            Home</a>
-                    </button>
-                </li>
-                <li class="nav-item">
-                    <button class="btn" [routerLink]="['/new']">
-                        <a class="nav-link active">
-                            <i class="fa fa-plus-circle"></i>
-                            New User</a>
-                    </button>
-                </li>
-            </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button class="btn" [routerLink]="['/home']">
+                            <a class="nav-link active">
+                                <i class="fa fa-home"></i>
+                                Home</a>
+                        </button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn" [routerLink]="['/new']">
+                            <a class="nav-link active">
+                                <i class="fa fa-plus-circle"></i>
+                                New User</a>
+                        </button>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </nav>
