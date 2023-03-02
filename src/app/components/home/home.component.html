@@ -2,8 +2,12 @@
     <h2>Users list</h2>
     <hr>
 
+    <div *ngIf="loading">
+        <app-spinner></app-spinner>
+    </div>
+
     <div class="row">
-        <article class="col-12 col-md-6 col-xl-4 my-2" *ngFor="let user of arrayUser">
+        <article class="col-12 col-md-6 col-lg-4 my-2" *ngFor="let user of arrayUsers">
             <app-user [myUser]="user"></app-user>
         </article>
     </div>

@@ -1,0 +1,26 @@
+<div class="card shadow">
+    <div class="card-body">
+        <div class="col">
+            <div class="row-sm-3 d-flex justify-content-center">
+                <img class="img-fluid rounded-circle mx-auto d-block w-50" [src]="myUser?.image"
+                    [alt]="'Image picture of:' + myUser?.first_name">
+            </div>
+            <div class="card-text d-flex mt-2 mb-2 align-items-center justify-content-center">
+                {{myUser?.first_name}} {{myUser?.last_name}}
+            </div>
+            <div class="row-sm-1 d-flex justify-content-around">
+                <a class="btn btn-white" [routerLink]="['/view', myUser?._id]">
+                    <i class="fa fa-magnifying-glass fa-2x"></i></a>
+                <a class="btn btn-white" [routerLink]="['/update', myUser?._id]">
+                    <i class="fa fa-arrows-rotate fa-2x"></i></a>
+                <a class="btn btn-white" (click)="deleteUsr(myUser?._id)">
+                    <i class="fa fa-trash-can fa-2x"></i></a>
+            </div>
+            <div class="row-sm-1 d-flex justify-content-around">
+                <a class="text-decoration-none text-black" [routerLink]="['/view', myUser?._id]">View Details</a>
+                <a class="text-decoration-none text-black" [routerLink]="['/update', myUser?._id]">Update</a>
+                <a class="text-decoration-none text-black" (click)="deleteUsr(myUser?._id)">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

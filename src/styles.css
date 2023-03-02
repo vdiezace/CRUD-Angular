@@ -1,11 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body {
-    font-family: 'Heebo', sans-serif, !important;
+:root{
+    --background-color-button-card: lightgrey;
+    --border-color-invalid: red;
+    --border-color-valid: green;
+    --error-text: red;
 }
 
-.contact-img {
-    width: 150px;
-    border-radius: 50%;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Heebo', sans-serif, !important;
 }
